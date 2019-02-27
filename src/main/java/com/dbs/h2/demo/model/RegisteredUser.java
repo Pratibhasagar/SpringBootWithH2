@@ -1,13 +1,13 @@
 package com.dbs.h2.demo.model;
 
+import lombok.Data;
 import lombok.ToString;
-import lombok.Value;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-@Value
+@Data
 @ToString
 public class RegisteredUser {
     @Id
