@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 @Data
 @ToString
-public class RegisteredUser {
+public class User {
     @Id
     private String cin;
     private String firstName;
