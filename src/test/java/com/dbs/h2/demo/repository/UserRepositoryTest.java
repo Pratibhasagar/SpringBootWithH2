@@ -36,4 +36,13 @@ public class UserRepositoryTest {
         assertTrue(user.isPresent());
         assertEquals((Long) 900001L, user.get().getMobileNumber());
     }
+
+    @Test
+    public void shouldInsertAUser() {
+        User user = User.builder().cin("CINHK0001").firstName("JACKIE").lastName("CHAN")
+                .mobileNumber(900003L).countryCode("HK").walletId(4000003L).build();
+        userRepository.save(user);
+
+        assertEquals(3, userRepository.count());
+    }
 }
