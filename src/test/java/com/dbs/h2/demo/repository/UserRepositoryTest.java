@@ -45,4 +45,11 @@ public class UserRepositoryTest {
 
         assertEquals(3, userRepository.count());
     }
+
+    @Test
+    public void shouldReturnUserGivenItsFirstName() {
+        List<User> users = userRepository.findUsersWithFirstName("JOHN");
+        System.out.println(users);
+        assertEquals(1, users.size());
+    }
 }
