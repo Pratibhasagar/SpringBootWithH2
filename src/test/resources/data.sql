@@ -1,3 +1,5 @@
+DELETE FROM user;
+
 INSERT INTO user(cin, first_Name, last_Name, middle_Name, mobile_Number, wallet_Id, country_Code)
 VALUES ('CINSG0001', 'JOHN', 'DOE', '', 900001, 4000001, 'SG');
 INSERT INTO user(cin, first_Name, last_Name, middle_Name, mobile_Number, wallet_Id, country_Code)
