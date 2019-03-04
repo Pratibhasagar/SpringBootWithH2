@@ -23,6 +23,6 @@ public class CardService {
     }
 
     public Page<Card> getCardsByUserId(Long userId, Pageable pageable) {
-        return cardRepository.findByUserId(userId, pageable);
+        return cardRepository.findByUserCin(userId, pageable);
     }
 }

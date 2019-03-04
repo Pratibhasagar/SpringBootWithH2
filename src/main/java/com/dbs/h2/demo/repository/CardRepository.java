@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CardRepository extends JpaRepository<Card, Long> {
-    Page<Card> findByUserId(Long userId, Pageable pageable);
+    Page<Card> findByUserCin(Long userId, Pageable pageable);
 }
