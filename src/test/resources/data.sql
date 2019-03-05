@@ -1,3 +1,4 @@
+DELETE FROM card;
 DELETE FROM user;
 
 INSERT INTO user(cin, first_Name, last_Name, middle_Name, mobile_Number, wallet_Id, country_Code)

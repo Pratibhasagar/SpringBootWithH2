@@ -1,5 +1,6 @@
 package com.dbs.h2.demo.repository;
 
+import com.dbs.h2.demo.model.Card;
 import com.dbs.h2.demo.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,7 +50,14 @@ public class UserRepositoryTest {
     @Test
     public void shouldReturnUserGivenItsFirstName() {
         List<User> users = userRepository.findUsersWithFirstName("JOHN");
-        System.out.println(users);
+
         assertEquals(1, users.size());
+    }
+
+    @Test
+    public void shouldReturnAllCardsOfAGivenUser() {
+        List<Card> cards = userRepository.findCardsOfUser("CINHK0001");
+        System.out.println(cards);
+        assertEquals(2, cards.size());
     }
 }
